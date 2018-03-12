@@ -1,0 +1,10 @@
+.form {
+  float: right;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+.button {
+  display: block;
+  margin-top: 10px;
+}

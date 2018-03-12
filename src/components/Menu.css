@@ -1,0 +1,13 @@
+.menu-nav {
+  width: 30%;
+  float: left;
+  box-sizing: border-box;
+
+}
+.menu-ul {
+  margin-top: 0;
+}
+.item:hover {
+  color: #4d8;;
+  cursor: pointer;
+}
