@@ -5,16 +5,15 @@ export const actionInput = (user) => {
   }
 };
 
-export const selectAction = (v) => {
-  console.log('v', v);
+export const selectMenuAction = (key) => {
+  console.log('key', key);
   return {
     type: 'SELECT',
-    value: v
+    key,
   }
 }
 
 export const generateAction = (v) => {
-  console.log('v', v);
   return {
     type: 'GENERATE',
     value: v

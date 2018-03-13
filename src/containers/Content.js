@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Form from '../components/Form';
+import Main from '../components/Main';
 import * as Actions from '../actions';
 
 class Content extends Component {
   render() {
     return (
-      <Form onSubmit={this.props.handleSubmit} />
+      <Main onSubmit={this.props.handleSubmit} />
     );
   }
 }
@@ -16,7 +16,7 @@ const mapStateToProps = () => {
 }
 
 const mapDispatchToProps = dispatch => {
-  return {    
+  return {
     handleSubmit: v => (event) => {
       event.preventDefault();
       dispatch(Actions.generateAction(v));

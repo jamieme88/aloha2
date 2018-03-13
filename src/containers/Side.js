@@ -2,25 +2,25 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Menu from '../components/Menu';
 import * as Actions from '../actions';
+import { bindActionCreators } from 'redux';
 
 class Side extends Component {
   render() {
     return (
-      <Menu onClick={this.props.selectMenuItem} />
+      <Menu selected={this.props.selectMenuItem} />
     );
   }
 }
 
-const mapStateToProps = () => {
-  return {};
+const mapStateToProps = (state) => {
+  return {
+    key: state.selectReducer.key
+  };
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    selectMenuItem: (v)=>(event) => {
-      console.log('mapDispatchToProps v', v);
-      dispatch(Actions.selectAction(v));
-    }
+    selectMenuItem: dispatch(Actions.selectMenuAction('134')),
   };
 }
 
