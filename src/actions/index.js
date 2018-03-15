@@ -6,7 +6,6 @@ export const actionInput = (user) => {
 };
 
 export const selectMenuAction = (key) => {
-  console.log('key', key);
   return {
     type: 'SELECT',
     key,

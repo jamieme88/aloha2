@@ -7,20 +7,21 @@ import { bindActionCreators } from 'redux';
 class Side extends Component {
   render() {
     return (
-      <Menu selected={this.props.selectMenuItem} />
+      <Menu onClick={this.props.selectMenuItem} />
     );
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = () => {
+  // state
   return {
-    key: state.selectReducer.key
+    // key: state.selectReducer.key
   };
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    selectMenuItem: dispatch(Actions.selectMenuAction('134')),
+    // selectMenuItem: (key) => dispatch(Actions.generateAction(key))
   };
 }
 
